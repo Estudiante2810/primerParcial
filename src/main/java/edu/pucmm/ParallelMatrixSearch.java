@@ -29,11 +29,13 @@ public class ParallelMatrixSearch {
         // System.out.println("Tiempo búsqueda paralela: " + ((endTime - startTime) / 1_000_000) + "ms");
     }
 
+    // esta funcion hace un recodigo secuancial por la matrix hasta encontrar el numero indicado
     private static void sequentialSearch() {
         for (int i = 0; i < MATRIX_SIZE; i++) {
             for (int j = 0; j < MATRIX_SIZE; j++) {
                 if(matrix[i][j] == TARGET){
-                    System.out.println("Encontro el numero" + matrix[i][j]);
+                    //si se agrega el println el tiempo durara 2ms mas de lo que realmente dura en econtrar el numero
+                    //System.out.println("Encontro el numero" + matrix[i][j]);
                     return;
                 }
             }
